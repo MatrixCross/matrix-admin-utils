@@ -27,7 +27,6 @@ specifiers:
   typescript: ^5.0.4
   vitepress: 1.0.0-alpha.75
   vitest: ^0.31.0
-  vue: '2.6'
 
 devDependencies:
   '@commitlint/cli': 17.6.3
@@ -56,7 +55,6 @@ devDependencies:
   typescript: 5.0.4
   vitepress: 1.0.0-alpha.75_@types+node@20.1.0
   vitest: 0.31.0_jsdom@22.0.0
-  vue: 2.6.14
 
 packages:
 
@@ -4129,10 +4127,6 @@ packages:
         optional: true
     dependencies:
       vue: 3.2.47
-    dev: true
-
-  /vue/2.6.14:
-    resolution: {integrity: sha512-x2284lgYvjOMj3Za7kqzRcUSxBboHqtgRE2zlos1qWaOye5yUmHn42LB1250NJBLRwEcdrB0JRwyPTEPhfQjiQ==}
     dev: true
 
   /vue/3.2.47:
