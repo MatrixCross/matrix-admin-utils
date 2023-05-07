@@ -1,0 +1,101 @@
+{
+  "name": "matrix-admin-utils",
+  "version": "0.0.1",
+  "description": "一个简单的工具封装库",
+  "license": "MIT",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "types/index.d.ts",
+  "jsdelivr": "dist/iife/index.js",
+  "unpkg": "dist/iife/index.js",
+  "miniprogram": "dist/cjs",
+  "files": [
+    "dist",
+    "types"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "author": "樱吹雪",
+  "homepage": "https://lib-starter-rollup.wyatex.online",
+  "repository": "Wyatex/Lib-Starter-Rollup",
+  "bugs": {
+    "url": "https://github.com/Wyatex/Lib-Starter-Rollup/issues"
+  },
+  "keywords": [
+    "rollup",
+    "bundle",
+    "vitest",
+    "vitepress",
+    "typescript"
+  ],
+  "scripts": {
+    "build": "npm run build:types && npm run build:libs && npm run build:vp",
+    "build:types": "rimraf ./types && tsc --declaration --emitDeclarationOnly --outDir types -p tsconfig.lib.json",
+    "build:libs": "rimraf ./dist && rollup -c --bundleConfigAsCjs",
+    "build:docs": "typedoc",
+    "build:vp": "typedoc && vitepress build .",
+    "test:unit": "vitest",
+    "test:cov": "vitest run --coverage",
+    "preview:docs": "vitepress dev .",
+    "format": "prettier --write .",
+    "typecheck": "tsc --noEmit --skipLibCheck",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.6.3",
+    "@commitlint/config-conventional": "^17.6.3",
+    "@rollup/plugin-terser": "^0.4.1",
+    "@rollup/plugin-typescript": "^11.1.0",
+    "@types/crypto-js": "^4.1.1",
+    "@types/js-cookie": "^3.0.3",
+    "@types/node": "^20.1.0",
+    "@vitest/coverage-c8": "^0.31.0",
+    "bumpp": "^9.1.0",
+    "clipboard": "^2.0.11",
+    "conventional-changelog": "^3.1.25",
+    "conventional-changelog-cli": "^2.2.2",
+    "crypto-js": "^4.1.1",
+    "js-cookie": "^3.0.5",
+    "jsdom": "^22.0.0",
+    "lint-staged": "^13.2.2",
+    "prettier": "^2.8.8",
+    "rimraf": "^5.0.0",
+    "rollup": "^3.21.5",
+    "simple-git-hooks": "^2.8.1",
+    "tslib": "^2.5.0",
+    "typedoc": "^0.24.6",
+    "typedoc-plugin-markdown": "^3.15.3",
+    "typescript": "^5.0.4",
+    "vitepress": "1.0.0-alpha.75",
+    "vitest": "^0.31.0",
+    "vue": "2.6"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "@algolia/client-search"
+      ]
+    }
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged && npm run typecheck",
+    "commit-msg": "npx --no -- commitlint --edit ${1}"
+  },
+  "lint-staged": {
+    "*.{ts}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "peerDependencies": {
+    "clipboard": "^2.0.11",
+    "crypto-js": "^4.1.1",
+    "js-cookie": "^3.0.5",
+    "vue": "2.6"
+  }
+}
