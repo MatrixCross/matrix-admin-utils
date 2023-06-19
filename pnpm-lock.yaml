@@ -12,7 +12,7 @@ devDependencies:
     version: 0.4.1(rollup@3.21.5)
   '@rollup/plugin-typescript':
     specifier: ^11.1.0
-    version: 11.1.0(rollup@3.21.5)(tslib@2.5.0)(typescript@5.0.4)
+    version: 11.1.0(rollup@3.21.5)(tslib@2.5.3)(typescript@5.0.4)
   '@types/crypto-js':
     specifier: ^4.1.1
     version: 4.1.1
@@ -63,7 +63,7 @@ devDependencies:
     version: 2.8.1
   tslib:
     specifier: ^2.5.0
-    version: 2.5.0
+    version: 2.5.3
   typedoc:
     specifier: ^0.24.6
     version: 0.24.6(typescript@5.0.4)
@@ -789,7 +789,7 @@ packages:
       terser: 5.17.1
     dev: true
 
-  /@rollup/plugin-typescript@11.1.0(rollup@3.21.5)(tslib@2.5.0)(typescript@5.0.4):
+  /@rollup/plugin-typescript@11.1.0(rollup@3.21.5)(tslib@2.5.3)(typescript@5.0.4):
     resolution: {integrity: sha512-86flrfE+bSHB69znnTV6kVjkncs2LBMhcTCyxWgRxLyfXfQrxg4UwlAqENnjrrxnSNS/XKCDJCl8EkdFJVHOxw==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
@@ -805,7 +805,7 @@ packages:
       '@rollup/pluginutils': 5.0.2(rollup@3.21.5)
       resolve: 1.22.2
       rollup: 3.21.5
-      tslib: 2.5.0
+      tslib: 2.5.3
       typescript: 5.0.4
     dev: true
 
@@ -3420,7 +3420,7 @@ packages:
   /rxjs@7.8.1:
     resolution: {integrity: sha512-AA3TVj+0A2iuIoQkWEK/tqFjBq2j+6PO6Y0zJcvzLAFhEFIO3HL0vls9hWLncZbAAbK0mar7oZ4V079I/qPMxg==}
     dependencies:
-      tslib: 2.5.0
+      tslib: 2.5.3
     dev: true
 
   /safe-buffer@5.1.2:
@@ -3863,8 +3863,8 @@ packages:
       yn: 3.1.1
     dev: true
 
-  /tslib@2.5.0:
-    resolution: {integrity: sha512-336iVw3rtn2BUK7ORdIAHTyxHGRIHVReokCR3XjbckJMK7ms8FysBfhLR8IXnAgy7T0PTPNBWKiH514FOW/WSg==}
+  /tslib@2.5.3:
+    resolution: {integrity: sha512-mSxlJJwl3BMEQCUNnxXBU9jP4JBktcEGhURcPR6VQVlnP0FdDEsIaz0C35dXNGLyRfrATNofF0F5p2KPxQgB+w==}
     dev: true
 
   /type-detect@4.0.8:
