@@ -53,18 +53,18 @@ jobs:
         with:
           directory: coverage
           token: ${{ secrets.CODECOV_TOKEN }}
-  dependabot:
-    if: github.actor == 'dependabot[bot]'
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 7.25.0
-          run_install: |
-            - recursive: false
-              args: [--no-frozen-lockfile]
-      - name: Run Test
-        run: pnpm test:unit
-      - name: Run Type Check
-        run: pnpm typecheck
+  # dependabot:
+  #   if: github.actor == 'dependabot[bot]'
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - uses: pnpm/action-setup@v2
+  #       with:
+  #         version: 7.25.0
+  #         run_install: |
+  #           - recursive: false
+  #             args: [--no-frozen-lockfile]
+  #     - name: Run Test
+  #       run: pnpm test:unit
+  #     - name: Run Type Check
+  #       run: pnpm typecheck
